@@ -1,4 +1,5 @@
-﻿using QuestPDF.Elements.Table;
+﻿using EasyPDFGeneration.Models;
+using QuestPDF.Elements.Table;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
@@ -48,10 +49,8 @@ public class SimpleTableDocument : IDocument
     private readonly IEnumerable<Fund> _funds;
     public SimpleTableDocument(IEnumerable<Fund> funds)
     {
-        _funds = funds; 
+        _funds = funds;
     }
-
-
     public void Compose(IDocumentContainer container)
     {
         container
@@ -61,18 +60,19 @@ public class SimpleTableDocument : IDocument
 
                 page.Header().Column(column =>
                 {
-                    column.Item().ShowOnce().Text("This is my title page").SemiBold().FontSize(30).FontColor(Colors.Red.Medium);
+                    column.Item().ShowOnce().PaddingTop(11, Unit.Centimetre).PaddingBottom(11, Unit.Centimetre).Text("This is my title page").SemiBold().FontSize(30).FontColor(Colors.Red.Medium);
                     column.Item().SkipOnce().Text("This is the heading on every other page").SemiBold().FontSize(30).FontColor(Colors.Red.Medium);
 
                 });
 
+                page.Content().SkipOnce().Element(ComposeContent);
                 page.Content().Element(ComposeContent);
 
             });
     }
 
     public void ComposeContent(IContainer container)
-    { 
+    {
 
         container.Column(column =>
         {
@@ -118,9 +118,9 @@ public class SimpleTableDocument : IDocument
                 table.Cell().Element(CellStyle).AlignRight().Text($"£{fund.FundAmount}");
                 table.Cell().Element(CellStyle).AlignRight().Text(fund.Description);
                 table.Cell().Element(CellStyle).AlignRight().Text($"{fund.FundCreationDate.ToShortDateString()}");
-                table.GenerateCell(fund, CellStyle);
+                table.GetFundSize(fund, CellStyle);
 
-                
+
 
 
 
@@ -141,12 +141,12 @@ public class SimpleTableDocument : IDocument
     }
 
 
-   
+
 }
 
 public static class CellGenerator
 {
-    public static void GenerateCell(this TableDescriptor table, Fund fund, Func<IContainer, IContainer> cellStyle)
+    public static void GetFundSize(this TableDescriptor table, Fund fund, Func<IContainer, IContainer> cellStyle)
     {
         var condition = fund.FundAmount > 100000;
 
@@ -161,13 +161,4 @@ public static class CellGenerator
         }
 
     }
-}
-
-
-public class Fund
-{
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public DateTime FundCreationDate { get; set; }
-    public decimal FundAmount { get; set; } 
 }

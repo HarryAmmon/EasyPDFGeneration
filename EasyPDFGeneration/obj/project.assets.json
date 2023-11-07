@@ -9,14 +9,10 @@
           "HarfBuzzSharp.NativeAssets.macOS": "7.3.0"
         },
         "compile": {
-          "lib/net6.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/net6.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/HarfBuzzSharp.dll": {}
         }
       },
       "HarfBuzzSharp.NativeAssets.macOS/7.3.0": {
@@ -64,14 +60,10 @@
           "SkiaSharp.HarfBuzz": "2.88.6"
         },
         "compile": {
-          "lib/net6.0/QuestPDF.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/QuestPDF.dll": {}
         },
         "runtime": {
-          "lib/net6.0/QuestPDF.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/QuestPDF.dll": {}
         }
       },
       "SkiaSharp/2.88.6": {
@@ -81,14 +73,10 @@
           "SkiaSharp.NativeAssets.macOS": "2.88.6"
         },
         "compile": {
-          "lib/net6.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/net6.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.HarfBuzz/2.88.6": {
@@ -98,14 +86,10 @@
           "SkiaSharp": "2.88.6"
         },
         "compile": {
-          "lib/net6.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/SkiaSharp.HarfBuzz.dll": {}
         },
         "runtime": {
-          "lib/net6.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net6.0/SkiaSharp.HarfBuzz.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.macOS/2.88.6": {
@@ -446,27 +430,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ammonh\\.nuget\\packages\\": {}
+    "/Users/harryammon/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\EasyPDFGeneration\\EasyPDFGeneration\\EasyPDFGeneration.csproj",
+      "projectUniqueName": "/Users/harryammon/dev/EasyPDFGeneration/EasyPDFGeneration/EasyPDFGeneration.csproj",
       "projectName": "EasyPDFGeneration",
-      "projectPath": "C:\\dev\\EasyPDFGeneration\\EasyPDFGeneration\\EasyPDFGeneration.csproj",
-      "packagesPath": "C:\\Users\\ammonh\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\EasyPDFGeneration\\EasyPDFGeneration\\obj\\",
+      "projectPath": "/Users/harryammon/dev/EasyPDFGeneration/EasyPDFGeneration/EasyPDFGeneration.csproj",
+      "packagesPath": "/Users/harryammon/.nuget/packages/",
+      "outputPath": "/Users/harryammon/dev/EasyPDFGeneration/EasyPDFGeneration/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ammonh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/harryammon/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/thepensionsregulator/TPR/_packaging/TPR.Packages/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -495,8 +477,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -505,7 +486,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
